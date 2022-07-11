@@ -41,7 +41,7 @@
             <li><a href="http://<?php echo $_SERVER['HTTP_HOST'];?>/pariwisata/admin/supermarket/list.php"><i class="fa fa-circle-o"></i>Supermarket</a></li>
             <li><a href="http://<?php echo $_SERVER['HTTP_HOST'];?>/pariwisata/admin/atm/list.php"><i class="fa fa-circle-o"></i>ATM</a></li>
             <li><a href="http://<?php echo $_SERVER['HTTP_HOST'];?>/pariwisata/admin/bank/list.php"><i class="fa fa-circle-o"></i>BANK</a></li>          
-          
+            <li><a href="http://<?php echo $_SERVER['HTTP_HOST'];?>/pariwisata/admin/peta/list.php"><i class="fa fa-circle-o"></i>PETA KABUPATEN</a></li>
           </ul>
           <li>
           <a href="http://<?php echo $_SERVER['HTTP_HOST'];?>/pariwisata/index.php">

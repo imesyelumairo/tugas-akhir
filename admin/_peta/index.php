@@ -20,6 +20,9 @@ $querys = mysqli_query($conn, $sqls);
 $sqlm = "SELECT * FROM mangrove";
 $querym = mysqli_query($conn, $sqlm);
 
+$sqlp = "SELECT * FROM peta";
+$queryp = mysqli_query($conn, $sqlp);
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -254,6 +257,68 @@ $querym = mysqli_query($conn, $sqlm);
     <?php
             }
          ?>
+
+<?php
+        //START peta
+        $query =mysqli_query($conn, $sql);
+        while($dbp = mysqli_fetch_array($queryp)) { 
+            ?>
+            </script>
+            <script src="data/<?php echo $dbp['file_geojson'];?>"></script>
+            <script>
+    
+                function pop_<?php echo $dbp['nama_geojson'];?>(feature, layer) {
+                layer.on({
+                    mouseout: function() {
+                        for (i in e.target._eventParents) {
+                            e.target._eventParents[i].resetStyle(e.target);
+                        }
+                        if (typeof layer.closePopup == 'function') {
+                            layer.closePopup();
+                        } else {
+                            layer.eachLayer(function(feature){
+                                feature.closePopup()
+                            });
+                        }
+                    },
+                    
+                });
+                var popupContent_<?php echo $dbp['nama_geojson'];?> = '<table><tr><td colspan="2"><?php echo $dbp['nama_geojson'];?></td></tr></table>';
+                layer.bindPopup(popupContent_<?php echo $dbp['nama_geojson'];?>, {maxHeight: 400});
+            }
+           function style_<?php echo $dbp['nama_geojson'];?>() {
+            return {
+                pane: 'pane_<?php echo $dbp['nama_geojson'];?>',
+                opacity: 1,
+                color: 'rgba(255, 0, 0, 1)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity:0.1,
+                fillColor: '<?php echo $dbp['color'];?>',
+                interactive: true,
+                style :style_<?php echo $dbp['nama_geojson'];?>,
+            }
+        }
+            map.createPane('pane_<?php echo $dbp['nama_geojson'];?>');
+            map.getPane('pane_<?php echo $dbp['nama_geojson'];?>').style.zIndex = 404;
+            map.getPane('pane_<?php echo $dbp['nama_geojson'];?>').style['mix-blend-mode'] = 'normal';
+            var layer_<?php echo $dbp['nama_geojson'];?> = new L.geoJson(<?php echo $dbp['nama_geojson'];?>, {
+                attribution: '',
+                interactive: true,
+                dataVar: 'json_<?php echo $dbp['nama_geojson'];?>',
+                layerName: 'layer_<?php echo $dbp['nama_geojson'];?>',
+                onEachFeature: pop_<?php echo $dbp['nama_geojson'];?>,
+                style: style_<?php echo $dbp['nama_geojson'];?>
+    
+            });
+            map.addLayer(layer_<?php echo $dbp['nama_geojson'];?>);
+            <?php
+                }
+            ?>
+
          <?php
         //START mangrove
         $query =mysqli_query($conn, $sql);
@@ -314,6 +379,7 @@ $querym = mysqli_query($conn, $sqlm);
             <?php
                 }
             ?>
+
         </script>
     <?php include('../_layout/footer.php');?>
     <?php include('../_layout/javascript.php');?>

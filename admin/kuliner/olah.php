@@ -89,7 +89,7 @@
            </div>
            <div class="form-group">
                <label>Gambar</label>
-               <input type="file" name="_file_foto" id_rumah_makan="_file_foto"  class="form-control">
+               <input type="file" name="file_foto" id_rumah_makan="file_foto"  class="form-control">
            </div>
            <div class="form-group">
                 <button type="submit" name="simpan"class="btn btn-info"><i class="fa fa-save"></i> Simpan</button>
