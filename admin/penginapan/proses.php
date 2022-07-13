@@ -11,6 +11,7 @@ if (isset($_POST['mode'])){
     $jumlah_kamar = $_POST['jumlah_kamar'];
     $harga = $_POST['harga'];
     $informasi_lainnya = $_POST['informasi_lainnya'];
+    
     if($_POST['mode'] == 'tambah'){
         $sql = "INSERT INTO hotel (koordinat_N,koordinat_E,nama_hotel,alamat,fasilitas,jumlah_kamar,harga,informasi_lainnya) VALUES ('$koordinat_N','$koordinat_E','$nama_hotel','$alamat','$fasilitas','$jumlah_kamar','$harga','$informasi_lainnya')";
     } else if($_POST['mode'] == 'update'){

@@ -12,7 +12,6 @@
     $menu_makanan = '';
     $jumlah_harga = '';
     $informasi_lainnya = '';
-    $file_foto = '';
 
     $sqll="SELECT * FROM kuliner";
     $queryl = mysqli_query($conn,$sqll);
@@ -32,7 +31,6 @@
         $menu_makanan = $dt['menu_makanan']; 
         $jumlah_harga = $dt['jumlah_harga']; 
         $informasi_lainnya = $dt ['informasi_lainnya'];
-        $file_foto = $dt ['file_foto'];
     }
 ?>
 <!DOCTYPE html>

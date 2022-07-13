@@ -44,7 +44,6 @@
                     <th>Menu Makanan</th>
                     <th>Jumlah Harga</th>
                     <th>Informasi Lainnya</th>
-                    <th>Gambar</th>
                     <th>Aksi</th>
                 </tr>   
             </thead>  
@@ -63,7 +62,6 @@
                             <td><?php echo $dt["menu_makanan"];?></td>
                             <td><?php echo $dt["jumlah_harga"];?></td>
                             <td><?php echo $dt["informasi_lainnya"];?></td>
-                            <td><?php echo $dt["file_foto"];?></td>
                             <td>
                             <a href="olah.php?mode=update&id_rumah_makan=<?php  echo $dt["id_rumah_makan"];?>" class="btn btn-info"><i class="fa fa-edit"></i> Ubah</a>
                             <a href="proses.php?mode=hapus&id_rumah_makan=<?php echo $dt["id_rumah_makan"];?>" class="btn btn-danger"onclick="return confirm('Hapus data?')"><i class="fa fa-trash"></i>Hapus</a>

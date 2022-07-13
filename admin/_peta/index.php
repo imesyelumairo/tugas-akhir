@@ -10,7 +10,7 @@ $querya = mysqli_query($conn, $sqla);
 
 $sqlk = "SELECT * FROM kuliner";
 $queryk = mysqli_query($conn, $sqlk);
-
+                                                                                            
 $sqlh = "SELECT * FROM hotel";
 $queryh = mysqli_query($conn, $sqlh);
 
@@ -118,7 +118,7 @@ $queryp = mysqli_query($conn, $sqlp);
            
 
         });  
-        layer_<?php echo $dba['id_atm'];?>.bindPopup('<?php echo $dba['nama_atm'];?>');
+        layer_<?php echo $dba['id_atm'];?>.bindPopup('<?php echo $dba['nama_atm'];?><br><?php echo $dba['alamat'];?>');
         markersLayer.addLayer(layer_<?php echo $dba['id_atm'];?>);
   
         map.addLayer(markersLayer);
@@ -162,7 +162,7 @@ $queryp = mysqli_query($conn, $sqlp);
                
     
             });  
-            layer_<?php echo $dbk['id_rumah_makan'];?>.bindPopup('<?php echo $dbk['nama_rumah_makan'];?>');
+            layer_<?php echo $dbk['id_rumah_makan'];?>.bindPopup('<?php echo $dbk['nama_rumah_makan'];?><br><?php echo $dbk['alamat'];?><br><?php echo $dbk['menu_makanan'];?><br><?php echo $dbk['jumlah_harga'];?><br><?php echo $dbk['informasi_lainnya'];?>');
             markersLayer.addLayer(layer_<?php echo $dbk['id_rumah_makan'];?>);
       
             map.addLayer(markersLayer);
@@ -206,7 +206,7 @@ $queryp = mysqli_query($conn, $sqlp);
                
     
             });  
-            layer_<?php echo $dbh['id_hotel'];?>.bindPopup('<?php echo $dbh['nama_hotel'];?>');
+            layer_<?php echo $dbh['id_hotel'];?>.bindPopup('<?php echo $dbh['nama_hotel'];?><br><?php echo $dbh['fasilitas'];?><br><?php echo $dbh['harga'];?><br><?php echo $dbh['informasi_lainnya'];?>');
             markersLayer.addLayer(layer_<?php echo $dbh['id_hotel'];?>);
       
             map.addLayer(markersLayer);
@@ -248,7 +248,7 @@ $queryp = mysqli_query($conn, $sqlp);
                
     
             });  
-            layer_<?php echo $dbs['id_supermarket'];?>.bindPopup('<?php echo $dbs['nama_supermarket'];?>');
+            layer_<?php echo $dbs['id_supermarket'];?>.bindPopup('<?php echo $dbs['nama_supermarket'];?><br><?php echo $dbs['kelurahan'];?>');
             markersLayer.addLayer(layer_<?php echo $dbs['id_supermarket'];?>);
       
             map.addLayer(markersLayer);

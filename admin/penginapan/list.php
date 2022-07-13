@@ -63,6 +63,7 @@
                             <td><?php echo $dt["jumlah_kamar"];?></td>
                             <td><?php echo $dt["harga"];?></td>
                             <td><?php echo $dt["informasi_lainnya"];?></td>
+                           
                             <td>
                             <a href="olah.php?mode=update&id_hotel=<?php  echo $dt["id_hotel"];?>" class="btn btn-info"><i class="fa fa-edit"></i> Ubah</a>
                             <a href="proses.php?mode=hapus&id_hotel=<?php echo $dt["id_hotel"];?>" class="btn btn-danger"onclick="return confirm('Hapus data?')"><i class="fa fa-trash"></i>Hapus</a>
@@ -83,7 +84,7 @@
       </div>
      </section>
      </div> 
-     </div>   
+   
 <?php include('../_layout/footer.php');?>
 <?php include('../_layout/javascript.php');?>
 

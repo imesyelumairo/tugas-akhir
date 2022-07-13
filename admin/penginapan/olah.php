@@ -34,6 +34,8 @@
         $harga = $dt['harga'];
         $informasi_lainnya = $dt['informasi_lainnya']; 
         }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +62,7 @@
              <input type="hidden" name="id_hotel" value="<?php echo $id_hotel;?>" class="form-control">
            <div class="form-group">
                <label>Koordinat_N</label>
-               <input type="text" name="koordinat_N" id_hotel=h"koordinat_N" value="<?php echo $koordinat_N;?>" class="form-control">
+               <input type="text" name="koordinat_N" id_hotel="koordinat_N" value="<?php echo $koordinat_N;?>" class="form-control">
            </div>
            <div class="form-group">
                <label>Koordinat_E</label>
@@ -101,4 +103,5 @@
 <?php include('../_layout/javascript.php');?>
 </body>
 </html>
+
 
